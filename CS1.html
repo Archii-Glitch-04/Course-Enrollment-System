@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment System</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .custom-header {
+            background: linear-gradient(to right, #FADADD, #6610f2);
+            color: white;
+            padding: 20px;
+        }
+        .hero img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border: none;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="custom-header">
+        <h1>Welcome to the Course Enrollment System</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enroll">Enroll</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.edx.org/" target="_blank">External Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="C:\Users\Archana\Downloads\Variable.SG\books.jpg" alt="Course Banner" class="img-fluid">
+    </section>
+
+    <!-- Course List -->
+    <section id="courses" class="container mt-4">
+        <h2>Available Courses</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Duration</th>
+                    <th>Enroll</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Web Development</td>
+                    <td>3 Months</td>
+                    <td><a href="#enroll" class="btn btn-primary">Enroll</a></td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Data Science</td>
+                    <td>6 Months</td>
+                    <td><a href="#enroll" class="btn btn-primary">Enroll</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section id="enroll" class="container mt-4">
+        <h2>Enroll in a Course</h2>
+        <form id="enrollForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="course" class="form-label">Select Course:</label>
+                <select class="form-select" id="course" required>
+                    <option value="">Choose...</option>
+                    <option value="101">Web Development</option>
+                    <option value="102">Data Science</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Course Enrollment System | <a href="#" class="text-white">Privacy Policy</a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // JavaScript for form submission
+        document.getElementById("enrollForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("You have successfully enrolled!");
+        });
+    </script>
+
+</body>
+</html>
